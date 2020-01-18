@@ -14,7 +14,6 @@ Every project includes a readme.md with more information.
 * LEDMATRIX					[NA]
 * NeoMatrix					[NA]
 
-
 ## Author
 
 **Jarni Vanmal** - [JarniV](https://github.com/JarniV)
