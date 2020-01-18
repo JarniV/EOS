@@ -2,7 +2,9 @@
 
 ## Information
 Example files for using hardware with a Xilinx Avnet Minized Board.
+
 Each project consits of 2 C-projects: one example, and one used with Freertos.
+
 Every project includes a readme.md with more information. 
 
 ### Hardware Examples
