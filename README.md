@@ -7,13 +7,12 @@ Every project includes a readme.md with more information.
 
 ### Hardware Examples
 
-* PS LEDS and PS SWITCH			[NA]
-* SERIAL INPUT FROM TERMINAL	[NA]
-* PL LED						[NA]
-* 7 SEGMENT						[NA]
-* DICE							[NA]
-* LEDMATRIX						[NA]
-* NeoMatrix						[NA]
+* Project 1: Using PL button, PL LED and PS LED	[NA]
+* Project 2: Using Serial input from terminal	[NA]
+* Project 3: Using 7 SEGMENT [NA]
+* Project 4:  Using DICE [NA]
+* Project 5: Using LEDMATRIX [NA]
+* Project 6: Using NeoMatrix [NA]
 
 ## Author
 
