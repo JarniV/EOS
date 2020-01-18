@@ -7,7 +7,7 @@ Every project includes a readme.md with more information.
 
 ### Hardware Examples
 ```
-* PS LEDS and PS SWITCH		[*NA*]
+* PS LEDS and PS SWITCH				[*NA*]
 * PL LED					[*NA*]
 * 7 SEGMENT					[*NA*]
 * DICE						[*NA*]
