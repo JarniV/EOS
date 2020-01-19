@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Sun Jan 19 18:07:52 2020
+# Process ID: 11244
+# Current directory: C:/EOS_JV/Project4/Project4.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/EOS_JV/Project4/Project4.sdk/webtalk/webtalk.log
+# Journal file: C:/EOS_JV/Project4/Project4.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

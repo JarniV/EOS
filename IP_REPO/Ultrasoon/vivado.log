@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov  5 11:26:45 2019
+# Process ID: 2484
+# Current directory: C:/EOS/hc/IP_REPO/Ultrasoon
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13408 C:\EOS\hc\IP_REPO\Ultrasoon\edit_Ultrasoon_v1_0.xpr
+# Log file: C:/EOS/hc/IP_REPO/Ultrasoon/vivado.log
+# Journal file: C:/EOS/hc/IP_REPO/Ultrasoon\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/EOS/hc/IP_REPO/Ultrasoon/edit_Ultrasoon_v1_0.xpr
+INFO: [Project 1-313] Project file moved from 'c:/embeddedoperatingsystems/oefeningen/ip_repo' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/EOS/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/src/HC_SR04.vhd', nor could it be found using path 'c:/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/src/HC_SR04.vhd'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/EOS/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/hdl/Ultrasoon_v1_0_S00_AXI.vhd', nor could it be found using path 'c:/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/hdl/Ultrasoon_v1_0_S00_AXI.vhd'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/EOS/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/hdl/Ultrasoon_v1_0.vhd', nor could it be found using path 'c:/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/hdl/Ultrasoon_v1_0.vhd'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/EOS/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/component.xml', nor could it be found using path 'c:/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0/component.xml'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/EOS/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0', nor could it be found using path 'c:/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/EOS/EmbeddedOperatingSystems/Oefeningen/ip_repo/Ultrasoon_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 751.031 ; gain = 118.234
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  5 11:27:35 2019...

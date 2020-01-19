@@ -1,0 +1,161 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Jan 19 14:49:24 2020
+# Process ID: 6364
+# Current directory: C:/EOS_JV/Project3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10276 C:\EOS_JV\Project3\Project3.xpr
+# Log file: C:/EOS_JV/Project3/vivado.log
+# Journal file: C:/EOS_JV/Project3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/EOS_JV/Project3/Project3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:11 . Memory (MB): peak = 800.340 ; gain = 146.195
+update_compile_order -fileset sources_1
+open_bd_design {C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/design_1.bd}
+Successfully read diagram <design_1> from BD file <C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 890.215 ; gain = 56.707
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+set_property  ip_repo_paths  C:/EOS_JV/IP_REPO [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EOS_JV/IP_REPO'.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:Ultrasoon:1.0 Ultrasoon_0
+endgroup
+set_property location {1 189 -375} [get_bd_cells Ultrasoon_0]
+startgroup
+make_bd_pins_external  [get_bd_pins Ultrasoon_0/sonar_trig]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Ultrasoon_0/sonar_echo]
+endgroup
+set_property location {1.5 248 -374} [get_bd_cells Ultrasoon_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+connect_bd_net [get_bd_pins Ultrasoon_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/Ultrasoon_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins Ultrasoon_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </Ultrasoon_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+regenerate_bd_layout
+set_property location {250 633} [get_bd_ports sonar_echo_0]
+set_property location {291 667} [get_bd_ports sonar_echo_0]
+regenerate_bd_layout
+set_property location {809 646} [get_bd_ports sonar_echo_0]
+set_property location {795 664} [get_bd_ports sonar_echo_0]
+set_property location {824 635} [get_bd_ports sonar_echo_0]
+set_property location {802 709} [get_bd_ports sonar_echo_0]
+set_property location {1088 628} [get_bd_ports sonar_echo_0]
+make_wrapper -files [get_files C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/design_1.bd] -top
+Wrote  : <C:\EOS_JV\Project3\Project3.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1202.063 ; gain = 133.551
+add_files -norecurse C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Ultrasoon_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+Exporting to file C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/EOS_JV/Project3/Project3.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Sun Jan 19 15:10:10 2020] Launched design_1_processing_system7_0_0_synth_1, design_1_Ultrasoon_0_0_synth_1, design_1_auto_pc_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/EOS_JV/Project3/Project3.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_Ultrasoon_0_0_synth_1: C:/EOS_JV/Project3/Project3.runs/design_1_Ultrasoon_0_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/EOS_JV/Project3/Project3.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/EOS_JV/Project3/Project3.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+synth_1: C:/EOS_JV/Project3/Project3.runs/synth_1/runme.log
+[Sun Jan 19 15:10:11 2020] Launched impl_1...
+Run output will be captured here: C:/EOS_JV/Project3/Project3.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1295.766 ; gain = 73.012
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+[Sun Jan 19 15:18:42 2020] Launched impl_1...
+Run output will be captured here: C:/EOS_JV/Project3/Project3.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.444 . Memory (MB): peak = 2121.512 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.445 . Memory (MB): peak = 2121.512 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2121.512 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:36 ; elapsed = 00:00:28 . Memory (MB): peak = 2228.605 ; gain = 918.793
+place_ports sonar_echo_0 F14
+place_ports sonar_trig_0 F13
+set_property IOSTANDARD LVCMOS33 [get_ports [list sonar_echo_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sonar_trig_0]]
+file mkdir C:/EOS_JV/Project3/Project3.srcs/constrs_1/new
+close [ open C:/EOS_JV/Project3/Project3.srcs/constrs_1/new/Ultrasoon.xdc w ]
+add_files -fileset constrs_1 C:/EOS_JV/Project3/Project3.srcs/constrs_1/new/Ultrasoon.xdc
+set_property target_constrs_file C:/EOS_JV/Project3/Project3.srcs/constrs_1/new/Ultrasoon.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Jan 19 15:25:06 2020] Launched synth_1...
+Run output will be captured here: C:/EOS_JV/Project3/Project3.runs/synth_1/runme.log
+[Sun Jan 19 15:25:06 2020] Launched impl_1...
+Run output will be captured here: C:/EOS_JV/Project3/Project3.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.662 . Memory (MB): peak = 2268.871 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.662 . Memory (MB): peak = 2268.871 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2268.871 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2293.086 ; gain = 24.215
+file mkdir C:/EOS_JV/Project3/Project3.sdk
+file copy -force C:/EOS_JV/Project3/Project3.runs/impl_1/design_1_wrapper.sysdef C:/EOS_JV/Project3/Project3.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/EOS_JV/Project3/Project3.sdk -hwspec C:/EOS_JV/Project3/Project3.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/EOS_JV/Project3/Project3.sdk -hwspec C:/EOS_JV/Project3/Project3.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 19 16:46:42 2020...

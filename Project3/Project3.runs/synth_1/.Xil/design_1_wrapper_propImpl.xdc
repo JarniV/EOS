@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/EOS_JV/Project3/Project3.srcs/constrs_1/new/Ultrasoon.xdc rfile:../../../Project3.srcs/constrs_1/new/Ultrasoon.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F14 [get_ports sonar_echo_0]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F13 [get_ports sonar_trig_0]
