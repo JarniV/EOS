@@ -8,7 +8,7 @@ Example file for using hardware with a Xilinx Avnet Minized Board.
 ```
 * VCC - 5V
 * GND - Ground 
-* _CLK is connected to 100MHz Clock_
+* CLK is connected to 100MHz Clock
 
 set_property PACKAGE_PIN F14 [get_ports sonar_echo_0]
 set_property PACKAGE_PIN F13 [get_ports sonar_trig_0]
