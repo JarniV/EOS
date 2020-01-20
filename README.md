@@ -12,7 +12,7 @@ Every project consits of a _readme.md_ with more information.
 * Project 3: Using Ultrasoon - [LINK](https://github.com/JarniV/EOS/tree/master/Project3) 
 * Project 4: Using Dice - [LINK](https://github.com/JarniV/EOS/tree/master/Project4) 
 * Project 5: Using 7 Segment - [LINK](https://github.com/JarniV/EOS/tree/master/Project5) (TESTING)
-* Project 6: Buttons (NA)
+* Project 6: Buttons - [LINK](https://github.com/JarniV/EOS/tree/master/Project6) 
 * Project 7: Neomatrix (NA)
 * Project 8: Ledmatrix (NA)
 ## Author
