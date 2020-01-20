@@ -14,7 +14,7 @@ Every project consits of a _readme.md_ with more information.
 * Project 5: Using 7 Segment - [LINK](https://github.com/JarniV/EOS/tree/master/Project5) (TESTING)
 * Project 6: Buttons (NA)
 * Project 7: Neomatrix (NA)
-* Project 7: Ledmatrix (NA)
+* Project 8: Ledmatrix (NA)
 ## Author
 
 **Jarni Vanmal** - [JarniV](https://github.com/JarniV)
