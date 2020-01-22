@@ -15,7 +15,7 @@ Every project consits of a _readme.md_ with more information.
 * Project 6: Buttons - [LINK](https://github.com/JarniV/EOS/tree/master/Project6) 
 * Project 7: Neomatrix - [LINK](https://github.com/JarniV/EOS/tree/master/Project7) 
 * Project 8: FreeRtos Template File and XDC files - [LINK](https://github.com/JarniV/EOS/tree/master/Project8) 
-* Project 8: Voorbeeld Ine met 7 segment (oef12)- [LINK](https://github.com/JarniV/EOS/tree/master/Project9) 
+* Project 9: Voorbeeld Ine met 7 segment (oef12)- [LINK](https://github.com/JarniV/EOS/tree/master/Project9) 
 
 ## Author
 
