@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jan 21 14:20:53 2020
+# Process ID: 1824
+# Current directory: C:/0_EOS/testIne/Oefening12
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13560 C:\0_EOS\testIne\Oefening12\Oefening12.xpr
+# Log file: C:/0_EOS/testIne/Oefening12/vivado.log
+# Journal file: C:/0_EOS/testIne/Oefening12\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/0_EOS/testIne/Oefening12/Oefening12.xpr
+INFO: [Project 1-313] Project file moved from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/../Users/11600782/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store', nor could it be found using path 'C:/Users/11600782/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/0_EOS/IP_REPO', nor could it be found using path 'C:/EmbeddedOperatingSystems/Oefeningen/IP_REPO'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/0_EOS/IP_REPO'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_SevenSegmentDriver_0_0
+
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 815.469 ; gain = 201.371
+open_bd_design {C:/0_EOS/testIne/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:user:SevenSegmentDriver:1.0 - SevenSegmentDriver_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <design_1> from BD file <C:/0_EOS/testIne/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 954.383 ; gain = 27.988
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/0_EOS/testIne/Oefening12/Oefening12.sdk -hwspec C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/0_EOS/testIne/Oefening12/Oefening12.sdk -hwspec C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 21 14:45:05 2020...

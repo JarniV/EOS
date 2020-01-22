@@ -1,0 +1,1370 @@
+13:31:51 INFO  : Registering command handlers for SDK TCF services
+13:31:57 INFO  : Launching XSCT server: xsct.bat -interactive C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\temp_xsdb_launch_script.tcl
+13:32:05 INFO  : XSCT server has started successfully.
+13:32:08 INFO  : Successfully done setting XSCT server connection channel  
+13:32:08 INFO  : Processing command line option -hwspec C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper.hdf.
+13:32:08 INFO  : Successfully done setting SDK workspace  
+13:40:59 INFO  : Refreshed build settings on project Oefening12
+15:02:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:02:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:03:00 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:03:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:03:14 INFO  : 'fpga -state' command is executed.
+15:03:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:03:14 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:03:14 INFO  : 'jtag frequency' command is executed.
+15:03:14 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:03:14 INFO  : Context for 'APU' is selected.
+15:03:14 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:03:14 INFO  : 'configparams force-mem-access 1' command is executed.
+15:03:14 INFO  : Context for 'APU' is selected.
+15:03:14 INFO  : 'stop' command is executed.
+15:03:14 INFO  : 'ps7_init' command is executed.
+15:03:14 INFO  : 'ps7_post_config' command is executed.
+15:03:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:03:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:15 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:03:15 INFO  : 'configparams force-mem-access 0' command is executed.
+15:03:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:03:15 INFO  : Memory regions updated for context APU
+15:03:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:15 INFO  : 'con' command is executed.
+15:03:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+15:03:15 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+15:07:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:07:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:07:59 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:08:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:08:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:08:39 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:08:53 INFO  : Disconnected from the channel tcfchan#1.
+15:08:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:08:54 INFO  : 'fpga -state' command is executed.
+15:08:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:08:54 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:08:54 INFO  : 'jtag frequency' command is executed.
+15:08:54 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:08:54 INFO  : Context for 'APU' is selected.
+15:08:56 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:08:56 INFO  : 'configparams force-mem-access 1' command is executed.
+15:08:56 INFO  : Context for 'APU' is selected.
+15:08:56 INFO  : 'stop' command is executed.
+15:08:57 INFO  : 'ps7_init' command is executed.
+15:08:57 INFO  : 'ps7_post_config' command is executed.
+15:08:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:08:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:57 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:08:57 INFO  : 'configparams force-mem-access 0' command is executed.
+15:08:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:08:57 INFO  : Memory regions updated for context APU
+15:08:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:58 INFO  : 'con' command is executed.
+15:08:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+15:08:58 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+15:14:26 INFO  : Disconnected from the channel tcfchan#2.
+15:22:22 INFO  : Registering command handlers for SDK TCF services
+15:22:26 INFO  : Launching XSCT server: xsct.bat -interactive C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\temp_xsdb_launch_script.tcl
+15:22:36 INFO  : XSCT server has started successfully.
+15:22:38 INFO  : Processing command line option -hwspec C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper.hdf.
+15:22:39 INFO  : Successfully done setting XSCT server connection channel  
+15:22:39 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+15:22:50 INFO  : Successfully done setting SDK workspace  
+15:25:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:25:12 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:25:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:25:29 INFO  : 'fpga -state' command is executed.
+15:25:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:29 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:25:29 INFO  : 'jtag frequency' command is executed.
+15:25:29 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:25:29 INFO  : Context for 'APU' is selected.
+15:25:29 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:25:29 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:29 INFO  : Context for 'APU' is selected.
+15:25:29 INFO  : 'stop' command is executed.
+15:25:31 INFO  : 'ps7_init' command is executed.
+15:25:31 INFO  : 'ps7_post_config' command is executed.
+15:25:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:25:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:31 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:31 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:32 INFO  : Memory regions updated for context APU
+15:25:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:32 INFO  : 'con' command is executed.
+15:25:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+15:25:32 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+17:40:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:40:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:40:50 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:43:33 INFO  : Disconnected from the channel tcfchan#1.
+17:43:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:43:34 INFO  : 'fpga -state' command is executed.
+17:43:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:43:35 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+17:43:35 INFO  : 'jtag frequency' command is executed.
+17:43:35 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:43:35 INFO  : Context for 'APU' is selected.
+17:43:38 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:43:38 INFO  : 'configparams force-mem-access 1' command is executed.
+17:43:38 INFO  : Context for 'APU' is selected.
+17:43:38 INFO  : 'stop' command is executed.
+17:43:39 INFO  : 'ps7_init' command is executed.
+17:43:39 INFO  : 'ps7_post_config' command is executed.
+17:43:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:43:39 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:43:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:43:40 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:43:40 INFO  : 'configparams force-mem-access 0' command is executed.
+17:43:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:43:40 INFO  : Memory regions updated for context APU
+17:43:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:43:40 INFO  : 'con' command is executed.
+17:43:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+17:43:40 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+17:45:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:45:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:45:48 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:46:15 INFO  : Disconnected from the channel tcfchan#2.
+17:46:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:46:16 INFO  : 'fpga -state' command is executed.
+17:46:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:46:17 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+17:46:17 INFO  : 'jtag frequency' command is executed.
+17:46:17 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:46:17 INFO  : Context for 'APU' is selected.
+17:46:21 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:46:21 INFO  : 'configparams force-mem-access 1' command is executed.
+17:46:21 INFO  : Context for 'APU' is selected.
+17:46:21 INFO  : 'stop' command is executed.
+17:46:22 INFO  : 'ps7_init' command is executed.
+17:46:22 INFO  : 'ps7_post_config' command is executed.
+17:46:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:46:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:46:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:46:22 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:46:22 INFO  : 'configparams force-mem-access 0' command is executed.
+17:46:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:46:22 INFO  : Memory regions updated for context APU
+17:46:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:46:23 INFO  : 'con' command is executed.
+17:46:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+17:46:23 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+17:48:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:48:33 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:48:49 INFO  : Disconnected from the channel tcfchan#3.
+17:48:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:48:50 INFO  : 'fpga -state' command is executed.
+17:48:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:50 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+17:48:50 INFO  : 'jtag frequency' command is executed.
+17:48:50 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:48:50 INFO  : Context for 'APU' is selected.
+17:48:53 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:48:53 INFO  : 'configparams force-mem-access 1' command is executed.
+17:48:53 INFO  : Context for 'APU' is selected.
+17:48:53 INFO  : 'stop' command is executed.
+17:48:54 INFO  : 'ps7_init' command is executed.
+17:48:54 INFO  : 'ps7_post_config' command is executed.
+17:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:48:54 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:48:54 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:48:54 INFO  : 'configparams force-mem-access 0' command is executed.
+17:48:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:48:54 INFO  : Memory regions updated for context APU
+17:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:48:54 INFO  : 'con' command is executed.
+17:48:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+17:48:54 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+18:00:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:00:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:00:39 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:01:48 INFO  : Disconnected from the channel tcfchan#4.
+18:01:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:01:49 INFO  : 'fpga -state' command is executed.
+18:01:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:01:49 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+18:01:49 INFO  : 'jtag frequency' command is executed.
+18:01:49 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:01:49 INFO  : Context for 'APU' is selected.
+18:01:52 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:01:52 INFO  : 'configparams force-mem-access 1' command is executed.
+18:01:52 INFO  : Context for 'APU' is selected.
+18:01:52 INFO  : 'stop' command is executed.
+18:01:52 INFO  : 'ps7_init' command is executed.
+18:01:52 INFO  : 'ps7_post_config' command is executed.
+18:01:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:01:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:01:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:01:53 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:01:53 INFO  : 'configparams force-mem-access 0' command is executed.
+18:01:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:01:53 INFO  : Memory regions updated for context APU
+18:01:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:01:53 INFO  : 'con' command is executed.
+18:01:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+18:01:53 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+18:15:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:15:02 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:15:17 INFO  : Disconnected from the channel tcfchan#5.
+18:15:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:15:18 INFO  : 'fpga -state' command is executed.
+18:15:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:19 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+18:15:19 INFO  : 'jtag frequency' command is executed.
+18:15:19 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:15:19 INFO  : Context for 'APU' is selected.
+18:15:21 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:15:21 INFO  : 'configparams force-mem-access 1' command is executed.
+18:15:21 INFO  : Context for 'APU' is selected.
+18:15:21 INFO  : 'stop' command is executed.
+18:15:22 INFO  : 'ps7_init' command is executed.
+18:15:22 INFO  : 'ps7_post_config' command is executed.
+18:15:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:15:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:22 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:15:22 INFO  : 'configparams force-mem-access 0' command is executed.
+18:15:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:15:22 INFO  : Memory regions updated for context APU
+18:15:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:23 INFO  : 'con' command is executed.
+18:15:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+18:15:23 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+18:16:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:16:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:16:57 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:17:07 INFO  : Disconnected from the channel tcfchan#6.
+18:17:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:17:08 INFO  : 'fpga -state' command is executed.
+18:17:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:08 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+18:17:08 INFO  : 'jtag frequency' command is executed.
+18:17:08 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:17:08 INFO  : Context for 'APU' is selected.
+18:17:11 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:17:11 INFO  : 'configparams force-mem-access 1' command is executed.
+18:17:11 INFO  : Context for 'APU' is selected.
+18:17:11 INFO  : 'stop' command is executed.
+18:17:12 INFO  : 'ps7_init' command is executed.
+18:17:12 INFO  : 'ps7_post_config' command is executed.
+18:17:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:17:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:17:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:17:12 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:17:12 INFO  : 'configparams force-mem-access 0' command is executed.
+18:17:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:17:12 INFO  : Memory regions updated for context APU
+18:17:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:17:12 INFO  : 'con' command is executed.
+18:17:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+18:17:12 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+18:44:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:44:14 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:44:29 INFO  : Disconnected from the channel tcfchan#7.
+18:44:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+18:44:30 INFO  : 'fpga -state' command is executed.
+18:44:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:30 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+18:44:30 INFO  : 'jtag frequency' command is executed.
+18:44:30 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:44:30 INFO  : Context for 'APU' is selected.
+18:44:32 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:44:32 INFO  : 'configparams force-mem-access 1' command is executed.
+18:44:32 INFO  : Context for 'APU' is selected.
+18:44:32 INFO  : 'stop' command is executed.
+18:44:33 INFO  : 'ps7_init' command is executed.
+18:44:33 INFO  : 'ps7_post_config' command is executed.
+18:44:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:44:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:33 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:44:33 INFO  : 'configparams force-mem-access 0' command is executed.
+18:44:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:44:33 INFO  : Memory regions updated for context APU
+18:44:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:33 INFO  : 'con' command is executed.
+18:44:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+18:44:33 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+18:45:22 INFO  : Disconnected from the channel tcfchan#8.
+12:52:59 INFO  : Registering command handlers for SDK TCF services
+12:53:03 INFO  : Launching XSCT server: xsct.bat -interactive C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\temp_xsdb_launch_script.tcl
+12:53:12 INFO  : XSCT server has started successfully.
+12:53:12 INFO  : Successfully done setting XSCT server connection channel  
+12:53:14 INFO  : Processing command line option -hwspec C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper.hdf.
+12:53:14 INFO  : Successfully done setting SDK workspace  
+12:53:25 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+12:53:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:53:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:53:36 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:57:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:57:31 INFO  : 'fpga -state' command is executed.
+12:57:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:57:32 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:57:32 INFO  : 'jtag frequency' command is executed.
+12:57:32 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:57:32 INFO  : Context for 'APU' is selected.
+12:57:32 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:57:32 INFO  : 'configparams force-mem-access 1' command is executed.
+12:57:33 INFO  : Context for 'APU' is selected.
+12:57:33 INFO  : 'stop' command is executed.
+12:57:33 INFO  : 'ps7_init' command is executed.
+12:57:33 INFO  : 'ps7_post_config' command is executed.
+12:57:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:57:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:34 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:57:34 INFO  : 'configparams force-mem-access 0' command is executed.
+12:57:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:57:34 INFO  : Memory regions updated for context APU
+12:57:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:35 INFO  : 'con' command is executed.
+12:57:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+12:57:35 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:07:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:07:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:07:36 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:07:56 INFO  : Disconnected from the channel tcfchan#1.
+13:07:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:07:57 INFO  : 'fpga -state' command is executed.
+13:07:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:07:57 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:07:57 INFO  : 'jtag frequency' command is executed.
+13:07:57 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:07:57 INFO  : Context for 'APU' is selected.
+13:08:01 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:08:01 INFO  : 'configparams force-mem-access 1' command is executed.
+13:08:01 INFO  : Context for 'APU' is selected.
+13:08:01 INFO  : 'stop' command is executed.
+13:08:02 INFO  : 'ps7_init' command is executed.
+13:08:02 INFO  : 'ps7_post_config' command is executed.
+13:08:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:08:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:08:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:08:03 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:08:03 INFO  : 'configparams force-mem-access 0' command is executed.
+13:08:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:08:03 INFO  : Memory regions updated for context APU
+13:08:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:08:03 INFO  : 'con' command is executed.
+13:08:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:08:03 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:14:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:14:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:14:26 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:14:37 INFO  : Disconnected from the channel tcfchan#2.
+13:14:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:14:38 INFO  : 'fpga -state' command is executed.
+13:14:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:14:38 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:14:38 INFO  : 'jtag frequency' command is executed.
+13:14:39 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:14:39 INFO  : Context for 'APU' is selected.
+13:14:44 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:14:44 INFO  : 'configparams force-mem-access 1' command is executed.
+13:14:44 INFO  : Context for 'APU' is selected.
+13:14:44 INFO  : 'stop' command is executed.
+13:14:45 INFO  : 'ps7_init' command is executed.
+13:14:45 INFO  : 'ps7_post_config' command is executed.
+13:14:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:45 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:14:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:46 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:14:46 INFO  : 'configparams force-mem-access 0' command is executed.
+13:14:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:14:46 INFO  : Memory regions updated for context APU
+13:14:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:47 INFO  : 'con' command is executed.
+13:14:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:14:47 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:18:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:18:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:18:22 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:19:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:19:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:19:38 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:19:49 INFO  : Disconnected from the channel tcfchan#3.
+13:19:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:19:50 INFO  : 'fpga -state' command is executed.
+13:19:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:19:51 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:19:51 INFO  : 'jtag frequency' command is executed.
+13:19:51 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:19:51 INFO  : Context for 'APU' is selected.
+13:19:54 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:19:54 INFO  : 'configparams force-mem-access 1' command is executed.
+13:19:54 INFO  : Context for 'APU' is selected.
+13:19:54 INFO  : 'stop' command is executed.
+13:19:55 INFO  : 'ps7_init' command is executed.
+13:19:55 INFO  : 'ps7_post_config' command is executed.
+13:19:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:19:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:55 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:19:55 INFO  : 'configparams force-mem-access 0' command is executed.
+13:19:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:19:55 INFO  : Memory regions updated for context APU
+13:19:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:55 INFO  : 'con' command is executed.
+13:19:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:19:56 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:21:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:21:10 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:21:28 INFO  : Disconnected from the channel tcfchan#4.
+13:21:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:21:29 INFO  : 'fpga -state' command is executed.
+13:21:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:30 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:21:30 INFO  : 'jtag frequency' command is executed.
+13:21:30 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:21:30 INFO  : Context for 'APU' is selected.
+13:21:34 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:21:34 INFO  : 'configparams force-mem-access 1' command is executed.
+13:21:34 INFO  : Context for 'APU' is selected.
+13:21:34 INFO  : 'stop' command is executed.
+13:21:34 INFO  : 'ps7_init' command is executed.
+13:21:34 INFO  : 'ps7_post_config' command is executed.
+13:21:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:21:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:34 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:21:34 INFO  : 'configparams force-mem-access 0' command is executed.
+13:21:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:21:35 INFO  : Memory regions updated for context APU
+13:21:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:35 INFO  : 'con' command is executed.
+13:21:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:21:35 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:24:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:24:37 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:24:56 INFO  : Disconnected from the channel tcfchan#5.
+13:24:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:24:57 INFO  : 'fpga -state' command is executed.
+13:24:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:58 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:24:58 INFO  : 'jtag frequency' command is executed.
+13:24:58 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:24:58 INFO  : Context for 'APU' is selected.
+13:25:01 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:25:01 INFO  : 'configparams force-mem-access 1' command is executed.
+13:25:01 INFO  : Context for 'APU' is selected.
+13:25:01 INFO  : 'stop' command is executed.
+13:25:01 INFO  : 'ps7_init' command is executed.
+13:25:01 INFO  : 'ps7_post_config' command is executed.
+13:25:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:25:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:25:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:25:01 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:25:01 INFO  : 'configparams force-mem-access 0' command is executed.
+13:25:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:25:02 INFO  : Memory regions updated for context APU
+13:25:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:25:02 INFO  : 'con' command is executed.
+13:25:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:25:02 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:25:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:25:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:25:51 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:26:06 INFO  : Disconnected from the channel tcfchan#6.
+13:26:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:26:07 INFO  : 'fpga -state' command is executed.
+13:26:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:26:07 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:26:07 INFO  : 'jtag frequency' command is executed.
+13:26:07 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:26:07 INFO  : Context for 'APU' is selected.
+13:26:10 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:26:10 INFO  : 'configparams force-mem-access 1' command is executed.
+13:26:10 INFO  : Context for 'APU' is selected.
+13:26:10 INFO  : 'stop' command is executed.
+13:26:11 INFO  : 'ps7_init' command is executed.
+13:26:11 INFO  : 'ps7_post_config' command is executed.
+13:26:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:26:11 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:26:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:26:11 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:26:11 INFO  : 'configparams force-mem-access 0' command is executed.
+13:26:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:26:11 INFO  : Memory regions updated for context APU
+13:26:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:26:12 INFO  : 'con' command is executed.
+13:26:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:26:12 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:29:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:29:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:29:06 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:29:49 INFO  : Disconnected from the channel tcfchan#7.
+13:29:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:29:50 INFO  : 'fpga -state' command is executed.
+13:29:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:29:52 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:29:52 INFO  : 'jtag frequency' command is executed.
+13:29:52 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:29:52 INFO  : Context for 'APU' is selected.
+13:29:55 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:29:55 INFO  : 'configparams force-mem-access 1' command is executed.
+13:29:55 INFO  : Context for 'APU' is selected.
+13:29:55 INFO  : 'stop' command is executed.
+13:29:56 INFO  : 'ps7_init' command is executed.
+13:29:56 INFO  : 'ps7_post_config' command is executed.
+13:29:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:29:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:56 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:29:56 INFO  : 'configparams force-mem-access 0' command is executed.
+13:29:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:29:56 INFO  : Memory regions updated for context APU
+13:29:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:57 INFO  : 'con' command is executed.
+13:29:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:29:57 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:33:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:33:16 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:33:27 INFO  : Disconnected from the channel tcfchan#8.
+13:33:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:33:28 INFO  : 'fpga -state' command is executed.
+13:33:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:29 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:33:29 INFO  : 'jtag frequency' command is executed.
+13:33:29 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:33:29 INFO  : Context for 'APU' is selected.
+13:33:32 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:33:32 INFO  : 'configparams force-mem-access 1' command is executed.
+13:33:32 INFO  : Context for 'APU' is selected.
+13:33:32 INFO  : 'stop' command is executed.
+13:33:33 INFO  : 'ps7_init' command is executed.
+13:33:33 INFO  : 'ps7_post_config' command is executed.
+13:33:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:33:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:33 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:33:33 INFO  : 'configparams force-mem-access 0' command is executed.
+13:33:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:33:33 INFO  : Memory regions updated for context APU
+13:33:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:33 INFO  : 'con' command is executed.
+13:33:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:33:34 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:45:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:45:25 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:45:35 INFO  : Disconnected from the channel tcfchan#9.
+13:45:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:45:36 INFO  : 'fpga -state' command is executed.
+13:45:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:37 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:45:37 INFO  : 'jtag frequency' command is executed.
+13:45:37 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:45:37 INFO  : Context for 'APU' is selected.
+13:45:40 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:45:40 INFO  : 'configparams force-mem-access 1' command is executed.
+13:45:40 INFO  : Context for 'APU' is selected.
+13:45:40 INFO  : 'stop' command is executed.
+13:45:40 INFO  : 'ps7_init' command is executed.
+13:45:40 INFO  : 'ps7_post_config' command is executed.
+13:45:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:45:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:41 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:45:41 INFO  : 'configparams force-mem-access 0' command is executed.
+13:45:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:45:41 INFO  : Memory regions updated for context APU
+13:45:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:41 INFO  : 'con' command is executed.
+13:45:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:45:41 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:47:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:47:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:47:18 INFO  : FPGA configured successfully with bitstream "C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:47:31 INFO  : Disconnected from the channel tcfchan#10.
+13:47:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:47:32 INFO  : 'fpga -state' command is executed.
+13:47:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:47:32 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:47:32 INFO  : 'jtag frequency' command is executed.
+13:47:32 INFO  : Sourcing of 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:47:32 INFO  : Context for 'APU' is selected.
+13:47:36 INFO  : Hardware design information is loaded from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:47:36 INFO  : 'configparams force-mem-access 1' command is executed.
+13:47:36 INFO  : Context for 'APU' is selected.
+13:47:36 INFO  : 'stop' command is executed.
+13:47:36 INFO  : 'ps7_init' command is executed.
+13:47:36 INFO  : 'ps7_post_config' command is executed.
+13:47:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:47:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:37 INFO  : The application 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:47:37 INFO  : 'configparams force-mem-access 0' command is executed.
+13:47:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:47:37 INFO  : Memory regions updated for context APU
+13:47:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:37 INFO  : 'con' command is executed.
+13:47:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:47:37 INFO  : Launch script is exported to file 'C:\EmbeddedOperatingSystems\Oefeningen\Herhaling\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+13:59:49 INFO  : Disconnected from the channel tcfchan#11.
+14:23:02 INFO  : Registering command handlers for SDK TCF services
+14:23:03 INFO  : Launching XSCT server: xsct.bat -interactive C:\0_EOS\testIne\Oefening12\Oefening12.sdk\temp_xsdb_launch_script.tcl
+14:23:07 INFO  : XSCT server has started successfully.
+14:23:10 INFO  : Processing command line option -hwspec C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper.hdf.
+14:23:10 INFO  : Successfully done setting XSCT server connection channel  
+14:23:16 INFO  : Successfully done setting SDK workspace  
+14:38:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:38:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+14:38:16 INFO  : FPGA configured successfully with bitstream "C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:39:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+14:39:29 INFO  : 'fpga -state' command is executed.
+14:39:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:39:29 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:39:29 INFO  : 'jtag frequency' command is executed.
+14:39:29 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:39:30 INFO  : Context for 'APU' is selected.
+14:39:30 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:39:30 INFO  : 'configparams force-mem-access 1' command is executed.
+14:39:30 INFO  : Context for 'APU' is selected.
+14:39:30 INFO  : 'stop' command is executed.
+14:39:30 INFO  : 'ps7_init' command is executed.
+14:39:30 INFO  : 'ps7_post_config' command is executed.
+14:39:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:39:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:39:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:39:30 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:39:30 INFO  : 'configparams force-mem-access 0' command is executed.
+14:39:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:39:31 INFO  : Memory regions updated for context APU
+14:39:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:39:31 INFO  : 'con' command is executed.
+14:39:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+14:39:31 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+14:40:08 INFO  : Disconnected from the channel tcfchan#1.
+14:40:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+14:40:09 INFO  : 'fpga -state' command is executed.
+14:40:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:40:10 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:40:10 INFO  : 'jtag frequency' command is executed.
+14:40:10 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:40:10 INFO  : Context for 'APU' is selected.
+14:40:12 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:40:12 INFO  : 'configparams force-mem-access 1' command is executed.
+14:40:12 INFO  : Context for 'APU' is selected.
+14:40:12 INFO  : 'stop' command is executed.
+14:40:13 INFO  : 'ps7_init' command is executed.
+14:40:13 INFO  : 'ps7_post_config' command is executed.
+14:40:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:40:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:13 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:40:13 INFO  : 'configparams force-mem-access 0' command is executed.
+14:40:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:40:13 INFO  : Memory regions updated for context APU
+14:40:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:13 INFO  : 'con' command is executed.
+14:40:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+14:40:13 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+14:40:56 INFO  : Disconnected from the channel tcfchan#2.
+14:40:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+14:40:57 INFO  : 'fpga -state' command is executed.
+14:40:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:40:58 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:40:58 INFO  : 'jtag frequency' command is executed.
+14:40:58 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:40:58 INFO  : Context for 'APU' is selected.
+14:40:58 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:40:58 INFO  : 'configparams force-mem-access 1' command is executed.
+14:40:58 INFO  : Context for 'APU' is selected.
+14:40:58 INFO  : 'stop' command is executed.
+14:40:58 INFO  : 'ps7_init' command is executed.
+14:40:58 INFO  : 'ps7_post_config' command is executed.
+14:40:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:40:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:59 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:40:59 INFO  : 'configparams force-mem-access 0' command is executed.
+14:40:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/Oefening12/Debug/Oefening12.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:40:59 INFO  : Memory regions updated for context APU
+14:40:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:40:59 INFO  : 'con' command is executed.
+14:40:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+14:40:59 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_oefening12.elf_on_local.tcl'
+14:42:59 INFO  : Disconnected from the channel tcfchan#3.
+12:20:00 INFO  : Registering command handlers for SDK TCF services
+12:20:02 INFO  : Launching XSCT server: xsct.bat -interactive C:\0_EOS\testIne\Oefening12\Oefening12.sdk\temp_xsdb_launch_script.tcl
+12:20:05 INFO  : XSCT server has started successfully.
+12:20:05 INFO  : Successfully done setting XSCT server connection channel  
+12:20:05 INFO  : Processing command line option -hwspec C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper.hdf.
+12:20:05 INFO  : Successfully done setting SDK workspace  
+12:20:05 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+12:25:34 INFO  : Refreshed build settings on project FreertosTemplate
+12:54:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:54:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:54:35 INFO  : FPGA configured successfully with bitstream "C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:55:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:55:09 INFO  : 'fpga -state' command is executed.
+12:55:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:55:09 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:55:09 INFO  : 'jtag frequency' command is executed.
+12:55:09 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:55:09 INFO  : Context for 'APU' is selected.
+12:55:10 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:55:10 INFO  : 'configparams force-mem-access 1' command is executed.
+12:55:10 INFO  : Context for 'APU' is selected.
+12:55:10 INFO  : 'stop' command is executed.
+12:55:10 INFO  : 'ps7_init' command is executed.
+12:55:10 INFO  : 'ps7_post_config' command is executed.
+12:55:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:55:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:10 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/freertosHelloWorld/Debug/freertosHelloWorld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:55:10 INFO  : 'configparams force-mem-access 0' command is executed.
+12:55:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/freertosHelloWorld/Debug/freertosHelloWorld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:55:10 INFO  : Memory regions updated for context APU
+12:55:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:11 INFO  : 'con' command is executed.
+12:55:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+12:55:11 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertoshelloworld.elf_on_local.tcl'
+12:55:31 INFO  : Disconnected from the channel tcfchan#1.
+12:55:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:55:32 INFO  : 'fpga -state' command is executed.
+12:55:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:55:32 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:55:32 INFO  : 'jtag frequency' command is executed.
+12:55:32 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:55:32 INFO  : Context for 'APU' is selected.
+12:55:35 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:55:35 INFO  : 'configparams force-mem-access 1' command is executed.
+12:55:35 INFO  : Context for 'APU' is selected.
+12:55:35 INFO  : 'stop' command is executed.
+12:55:35 INFO  : 'ps7_init' command is executed.
+12:55:35 INFO  : 'ps7_post_config' command is executed.
+12:55:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:55:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:36 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/FreertosTemplate/Debug/FreertosTemplate.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:55:36 INFO  : 'configparams force-mem-access 0' command is executed.
+12:55:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/FreertosTemplate/Debug/FreertosTemplate.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:55:36 INFO  : Memory regions updated for context APU
+12:55:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:36 INFO  : 'con' command is executed.
+12:55:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+12:55:36 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertostemplate.elf_on_local.tcl'
+12:56:43 INFO  : Disconnected from the channel tcfchan#2.
+12:56:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:56:45 INFO  : 'fpga -state' command is executed.
+12:56:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:56:45 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:56:45 INFO  : 'jtag frequency' command is executed.
+12:56:45 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:56:45 INFO  : Context for 'APU' is selected.
+12:56:45 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:56:45 INFO  : 'configparams force-mem-access 1' command is executed.
+12:56:45 INFO  : Context for 'APU' is selected.
+12:56:45 INFO  : 'stop' command is executed.
+12:56:46 INFO  : 'ps7_init' command is executed.
+12:56:46 INFO  : 'ps7_post_config' command is executed.
+12:56:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:56:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:56:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:56:46 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/FreertosTemplate/Debug/FreertosTemplate.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:56:46 INFO  : 'configparams force-mem-access 0' command is executed.
+12:56:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/FreertosTemplate/Debug/FreertosTemplate.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:56:46 INFO  : Memory regions updated for context APU
+12:56:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:56:46 INFO  : 'con' command is executed.
+12:56:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+12:56:46 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertostemplate.elf_on_local.tcl'
+13:11:43 INFO  : Disconnected from the channel tcfchan#3.
+13:11:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+13:11:44 INFO  : 'fpga -state' command is executed.
+13:11:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:11:44 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+13:11:44 INFO  : 'jtag frequency' command is executed.
+13:11:44 INFO  : Sourcing of 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:11:44 INFO  : Context for 'APU' is selected.
+13:11:44 INFO  : Hardware design information is loaded from 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:11:44 INFO  : 'configparams force-mem-access 1' command is executed.
+13:11:44 INFO  : Context for 'APU' is selected.
+13:11:45 INFO  : 'stop' command is executed.
+13:11:45 INFO  : 'ps7_init' command is executed.
+13:11:45 INFO  : 'ps7_post_config' command is executed.
+13:11:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:11:45 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:11:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:11:45 INFO  : The application 'C:/0_EOS/testIne/Oefening12/Oefening12.sdk/FreertosTemplate/Debug/FreertosTemplate.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:11:45 INFO  : 'configparams force-mem-access 0' command is executed.
+13:11:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow C:/0_EOS/testIne/Oefening12/Oefening12.sdk/FreertosTemplate/Debug/FreertosTemplate.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:11:45 INFO  : Memory regions updated for context APU
+13:11:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:11:45 INFO  : 'con' command is executed.
+13:11:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+13:11:45 INFO  : Launch script is exported to file 'C:\0_EOS\testIne\Oefening12\Oefening12.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_freertostemplate.elf_on_local.tcl'
+13:14:11 INFO  : Disconnected from the channel tcfchan#4.

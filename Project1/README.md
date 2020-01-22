@@ -1,4 +1,4 @@
-# Embedded operating systems
+# Embedded Operating Systems
 
 ## Project 1: Using PL button, PL LED and PS LED
 Example file for using hardware with a Xilinx Avnet Minized Board.

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jan 22 12:18:15 2020
+# Process ID: 15136
+# Current directory: C:/0_EOS/testIne/Oefening12
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10808 C:\0_EOS\testIne\Oefening12\Oefening12.xpr
+# Log file: C:/0_EOS/testIne/Oefening12/vivado.log
+# Journal file: C:/0_EOS/testIne/Oefening12\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/0_EOS/testIne/Oefening12/Oefening12.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/0_EOS/testIne/Oefening12/Oefening12.sdk -hwspec C:/0_EOS/testIne/Oefening12/Oefening12.sdk/design_1_wrapper.hdf

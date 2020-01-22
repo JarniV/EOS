@@ -1,0 +1,34 @@
+13:12:00 **** Auto Build of configuration Debug for project FreertosTemplate ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FreertosTemplate_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'prvSend':
+../src/freertos_hello_world.c:80:6: warning: unused variable 'sendDataChar' [-Wunused-variable]
+  u32 sendDataChar = 0;
+      ^~~~~~~~~~~~
+../src/freertos_hello_world.c:77:19: warning: unused variable 'x500msecond' [-Wunused-variable]
+  const TickType_t x500msecond = pdMS_TO_TICKS( DELAY_500_MSECOND );
+                   ^~~~~~~~~~~
+../src/freertos_hello_world.c: In function 'prvReceive':
+../src/freertos_hello_world.c:93:6: warning: unused variable 'RecvDataChar' [-Wunused-variable]
+  u32 RecvDataChar;
+      ^~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: FreertosTemplate.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FreertosTemplate_bsp/ps7_cortexa9_0/lib -o "FreertosTemplate.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: FreertosTemplate.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size FreertosTemplate.elf  |tee "FreertosTemplate.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77860	   3372	  89424	 170656	  29aa0	FreertosTemplate.elf
+'Finished building: FreertosTemplate.elf.size'
+' '
+
+13:12:01 Build Finished (took 1s.212ms)
+

@@ -1,4 +1,4 @@
-# Embedded operating systems
+# Embedded Operating Systems
 
 ## Project 5: Seven Segment
 Example file for using hardware with a Xilinx Avnet Minized Board.

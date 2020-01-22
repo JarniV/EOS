@@ -1,0 +1,135 @@
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "SevenSegmentDriver.h"
+#include "xgpiops.h"
+#include "stdio.h"
+
+#define DELAY_1SEC	1000UL
+
+#define SSEGBASE XPAR_SEVENSEGMENTDRIVER_0_S00_AXI_BASEADDR
+#define SSEG_0 SEVENSEGMENTDRIVER_S00_AXI_SLV_REG0_OFFSET
+#define GPIO_DEVICE_ID		XPAR_XGPIOPS_0_DEVICE_ID
+
+static XGpioPs Gpio;
+
+static void SwitchTask( void *pvParameters);
+static void Uart( void *pvParameters);
+static void Segment(void *pvParameters);
+
+static TaskHandle_t xSwitchTask;
+static TaskHandle_t xUart;
+static TaskHandle_t xSegment;
+
+static QueueHandle_t Queue = NULL;
+
+u32 input_pin = 0;
+
+int main(void)
+{
+	xil_printf("Oefening 12 \r\n");
+
+	//initialize gpio driver
+	XGpioPs_Config *ConfigPtr;
+	ConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+	XGpioPs_CfgInitialize(&Gpio, ConfigPtr, ConfigPtr->BaseAddr);
+
+	//set input pin
+	XGpioPs_SetDirectionPin(&Gpio, input_pin, 0);
+
+	xTaskCreate(SwitchTask,
+				(const char * ) "SwitchTask",
+				configMINIMAL_STACK_SIZE,
+				NULL,
+				tskIDLE_PRIORITY,
+				&xSwitchTask);
+
+	xTaskCreate(Uart,
+				(const char * ) "UART",
+				configMINIMAL_STACK_SIZE,
+				NULL,
+				tskIDLE_PRIORITY,
+				&xUart);
+
+	xTaskCreate(Segment,
+				(const char *) "Segment",
+				configMINIMAL_STACK_SIZE,
+				NULL,
+				tskIDLE_PRIORITY + 1,
+				&xSegment);
+
+	Queue = xQueueCreate(5, sizeof(u32));
+
+	configASSERT(Queue);
+	vTaskStartScheduler();
+
+	for(;;);
+
+}
+
+static void SwitchTask( void *pvParameters)
+{
+	u32 prevdata = 0;
+	u32 newdata = 0;
+	u32 zero = 0;
+
+	xil_printf("In Switch task\r\n");
+
+	for(;;)
+	{
+		newdata = XGpioPs_ReadPin(&Gpio, input_pin);
+
+		if((newdata != prevdata) & (newdata == 1))
+		{
+			xQueueSend( Queue,
+						&zero,
+						0UL);
+			xil_printf("value of switch is %d\r\n", newdata);
+		}
+		prevdata = newdata;
+	}
+
+}
+
+static void Uart(void *pvParameters)
+{
+	char value;
+	char sendvalue;
+	xil_printf("In Uart Task\r\n");
+
+	for(;;)
+	{
+		value = (char)getchar();
+		sendvalue = value - 48;
+
+		xil_printf("you entered %c\r\n", sendvalue);
+
+		xQueueSend( Queue,
+					&sendvalue,
+					0UL );
+	}
+}
+
+static void Segment(void *pvParameters)
+{
+	u32 data;
+	xil_printf("In Segment Task\r\n");
+
+	for(;;)
+	{
+		//if(data =< 9 && data => 0)
+		//{
+		xQueueReceive(	Queue,
+						&data,
+						portMAX_DELAY);
+
+		xil_printf("recieved data is %d\r\n", data);
+
+		SEVENSEGMENTDRIVER_mWriteReg(SSEGBASE,SSEG_0,data<<28);
+		//}
+	}
+
+}

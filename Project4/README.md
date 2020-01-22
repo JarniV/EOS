@@ -1,4 +1,4 @@
-# Embedded operating systems
+# Embedded Operating Systems
 
 ## Project 4: Dice
 Example file for using hardware with a Xilinx Avnet Minized Board.

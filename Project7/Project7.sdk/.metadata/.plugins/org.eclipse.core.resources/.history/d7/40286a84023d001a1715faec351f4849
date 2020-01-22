@@ -1,0 +1,29 @@
+/******************************************************************************
+ * Created by Jarni Vanmal
+ * freertos_hello_world.c: Using PL switch, PL led and PS led
+ ******************************************************************************/
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+
+int main()
+{
+    init_platform();
+
+    print("Project 1: Using PL switch, PL led and PS led\n\r");
+    print("By Jarni Vanmal");
+
+    for(;;)
+    {
+
+
+
+    	sleep_A9(1);
+    }
+
+    cleanup_platform();
+    return 0;
+}

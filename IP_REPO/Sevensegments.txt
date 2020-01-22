@@ -1,0 +1,4 @@
+SevenSegment is van ine -> project 9 is voorbeeld, werkt 
+
+Seven_Segment	-> old files, geen idee of het werkt
+Seven_SegmentIP -> old files geen idee of het werkt
